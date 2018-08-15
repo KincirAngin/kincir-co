@@ -1,0 +1,101 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+  }
+  
+  .windmill {
+    position: relative;
+    width: 240px;
+    height: 355px;
+  }
+  
+  .wrapper {
+    width: 120px;
+    height: 240px;
+    margin: 0 auto;
+    position: relative;
+    transform: rotate(15deg);
+    animation-name: spin;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  .rect {
+    width: 60px;
+    height: 120px;
+    border-top-left-radius: 100%;
+    position: absolute;
+    transform-origin: 50% 100%;
+  }
+  
+  .red {
+    background: linear-gradient(45deg, #ff0000 45px, #db0000 45px);
+  }
+  
+  .yellow {
+    background: linear-gradient(45deg, #ffff00 45px, #dbdb00 45px);
+    transform: rotate(90deg) translateX(-30px) translateY(-30px);
+  }
+  
+  .green {
+    background: linear-gradient(45deg, #00ff00 45px, #00db00 45px);
+    transform: rotate(180deg) translateX(-60px);
+  }
+  
+  .blue {
+    background: linear-gradient(45deg, #0000ff 45px, #0000db 45px);
+    transform: rotate(270deg) translateX(-30px) translateY(30px);
+  }
+  
+  .center {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background: radial-gradient(ellipse at center, #ffffff 1%,#d3d3d3 100%);
+  }
+  
+  .stick {
+    width: 7px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(120px);
+    background: brown;
+  }
+  
+  /** Animation keyframes **/
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(15deg);
+    }
+    
+    90% {
+      transform: rotate(-1065deg);
+    }
+    
+    100% {
+      transform: rotate(-1065deg);
+    }
+    
+  }
+  .text-wrapper {
+    font-family: 'Raleway', sans-serif;
+    color: #0c0000;
+
+  }
